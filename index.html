@@ -13,14 +13,25 @@
         <div class="container">
             <div class="prices-data">
                 <h1 class="prices-data-title">Our Pricing</h1>
-                <div class="price-button-wrapper">
-                    <p class="price-button-text">Annually</p>
-                    <button class="price-button" type="button"></button>
-                    <p class="price-button-text">Monthly</p>
-                </div>
+                <form action="https:echo.htmlacademy.ru" class="pricing-switch">
+                    <div class="switch">
+                        <!-- switch radios -->
+                        <input class="switch-input-annual visually-hidden" type="radio" name="payment_period" value="annual" id="annual-payment-radio">
+                        <input class="switch-input-monthly visually-hidden" type="radio" name="payment_period" value="monthly" id="monthly-payment-radio">
+                        <label class="switch-label" for="annual-payment-radio">Annually</label>
+                        <!-- SWITch control -->
+                        <div class="switch-control">
+                            <div class="switch-circle">
+                            </div>
+                            <label class="switch-control-annual" for="annual-payment-radio"></label>
+                            <label class="switch-control-monthly" for="monthly-payment-radio"></label>
+                        </div>
+                        <label class="switch-label" for="monthly-payment-radio">Monthly</label>
+                    </div>
+                </form>
 
                 <div class="pricing-table-wrapper">
-                    <div class="prising-table">
+                    <div class="prising-table" data-payment-annually="199.99" data-payment-monthly="19.99">
                         <h1 class="prising-table-title">Basic</h1>
                         <div class="main-costs">
                             <span class="main-costs-mark">$</span>
@@ -36,7 +47,7 @@
                         <a class="button" href="#">Learn More</a>
                     </div>
                     
-                    <div class="prising-table prising-table-pro">
+                    <div class="prising-table prising-table-pro" data-payment-annually="249.99" data-payment-monthly="24.99">
                         <h1 class="prising-table-title prising-table-title-pro">Profeccional</h1>
                         <div class="main-costs">
                             <span class="main-costs-mark main-costs-mark-pro">$</span>
@@ -52,7 +63,7 @@
                         <a class="form-link" href="#">Learn More</a>
                     </div>
 
-                    <div class="prising-table">
+                    <div class="prising-table" data-payment-annually="399.99" data-payment-monthly="39.99">
                         <h1 class="prising-table-title">Master</h1>
                         <div class="main-costs">
                             <span class="main-costs-mark">$</span>
@@ -72,5 +83,6 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
